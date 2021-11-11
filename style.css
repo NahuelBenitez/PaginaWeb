@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #8e44ad;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8e44ad;
+    padding: 10px;
+    border-bottom: solid 2px #2c3e50;
+}
+
+nav a:visited,
+nav a:link {
+    color: #ecf0f1;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+nav>ul {
+    display: inline;
+    padding: 0;
+}
+
+nav>ul>li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+main {
+    display: block;
+    background-image: url(./img/fondo.jpg);
+    background-size: cover;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+footer {
+    padding: 10px;
+    border-top: solid 2px #2c3e50;
+}
+
+aside,
+article {
+    padding: 2em;
+}
+
+aside {
+    text-align: center;
+    max-width: 30%;
+}
+
+article {
+    width: 70%;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+    aside {
+        margin-left: 2px;
+    }
+}
+
+.logo {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 0.5em;
+}
+
+.subtitle {
+    background-color: #f1c40f;
+    font-size: 1em;
+    padding: 15px;
+    border: solid 1px;
+    margin-top: 0.4em;
+}
+
+
+/*CATALOGO*/
+
+.image-helado {
+    max-width: 100%;
+    max-height: 75%;
+}
+
+.element {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #2980b9;
+    border: solid 2px #c0392b;
+}
+
+.element-information .title {
+    font-weight: bold;
+}
+
+.element-information .price {
+    text-align: right;
+}
+
+.element-information {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.element button {
+    background-color: #f1c40f;
+    padding: 10px;
+    border: solid 1px #c0392b;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    margin-top: 0.2 em;
+    transition: 0.3ms;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element button:hover {
+    background-color: #c9a30d;
+}
