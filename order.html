@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>COPITO HELADOS</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <img src="./images/LOGOO.png" alt="HeladeriaCopito" class="logo">
+        </aside>
+        <article>
+            <h1 style="text-align: center; text-shadow: 2px 2px 4px white;">Order</h1>
+            <hr>
+            <div class="element">
+                <div class="order-selected">
+                    <img src="" width="200px" height="200px" alt="copahelada"><br>
+                    <div class="element-information">
+
+                        <div class="title">
+
+
+                        </div>
+                        <div class="price" id="price">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+                <fieldset>
+                    <div class="input-group">
+                        <div>
+
+                            <label for="first-name">First Name</label><br>
+                            <input type="text" name="first-name" id="first-name" placeholder="Ingrese su Nombre" size="30" maxlength="70" required> <br>
+                            <label for="last-name">Last Name</label><br>
+                            <input type="text" name="last-name" id="first-name" placeholder="Ingrese su Apellido" size="30" maxlength="70" required><br>
+
+                            <label for="address">Address</label><br>
+                            <input type="text" name="address" id="province" placeholder="Ingrese su Dirreccion" size="30" maxlength="90" required><br>
+                            <label for="province">Province</label><br>
+                            <input type="text" name="province" id="province" placeholder="Ingrese su Provincia" size="30" maxlength="70" required><br>
+                            <label for="country">Country</label><br>
+                            <input type="text" name="country" id="country" placeholder="Ingrese su Pais" size="30" maxlength="70" required><br>
+
+                            <label for="departament">Department</label><br>
+                            <input type="text" name="departament" id="departament" placeholder="Ingrese su Dpto./Piso" size="30" maxlength="70"><br>
+                            <label for="mail">Email</label><br>
+                            <input type="email" name="mail" id="mail" placeholder="example@example.com" size="30" maxlength="100" required><br>
+                            <label for="telephone">Telephone</label><br>
+                            <input type="tel" name="telephone" id="telephone" placeholder="Ingrese su numero de Telefono" size="30" maxlength="30" required><br>
+                        </div>
+
+
+                    </div>
+                    <hr>
+                    <div class="buttons-form">
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Order">
+                    </div>
+                </fieldset>
+
+            </form>
+
+        </article>
+    </main>
+
+    <div class="btn-home">
+        <a href="/">HOME</a>
+    </div>
+
+    <br>
+    <footer>
+        <nav class="myClass">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+</body>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const order = localStorage.getItem("order");
+        if (order) {
+            const catalogOrder = JSON.parse(order); //obtener el div completo por clase
+            const orderSelected = document.querySelector(".order-selected");
+            orderSelected.querySelector(".title").innerText = catalogOrder.title;
+            orderSelected.querySelector(".price").innerText = catalogOrder.price;
+            const img = orderSelected.querySelector("img");
+            img.setAttribute("src", `images/${catalogOrder.id}.jpg`);
+        }
+    });
+</script>
+
+</html>

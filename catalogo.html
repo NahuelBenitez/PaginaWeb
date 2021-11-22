@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Pagina Web Nahuel</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <title>COPITO HELADOS</title>
 </head>
 
 <body>
@@ -14,23 +15,22 @@
         <nav>
             <ul>
                 <li><a href="/">Inicio</a></li>
-                <li>
-                    <a href="catalogo.html">Catalogo</a></li>
-                <li>
-                    <a href="contact.html">Contacto</a></li>
+                <li><a href="catalogo.html" style="text-transform: uppercase;">Catalogo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <aside>
-            <img src="./img/LOGOO.png" alt="HeladeriaCopito" class="logo">
+            <img src="./images/LOGOO.png" alt="HeladeriaCopito" class="logo">
         </aside>
         <article>
-            <h1>Catalogo</h1>
+            <h1 style="text-align: center; text-shadow: 2px 2px 4px white;">Catalogo</h1>
+            <hr>
             <section class="columns-desktop">
                 <div class="element">
-                    <img src="img/helado.jpg" width="200px" alt="copahelada" class="image-helado">
+                    <img src="images/helado.jpg" width="200px" alt="copahelada" class="image-helado">
                     <div class="element-information">
                         <div class="title">
                             Copa Helada
@@ -42,11 +42,106 @@
                     </div>
                     <p>
                         Copa Helada<br> Frutilla- Americana -Chocolate
-                    </p>
-                    <button>
-                        Pedir
-                    </button>
+                    </p> <br>
+                    <hr><br>
+                    <button data-order="helado">Pedir</button>
                 </div>
+                <!--otra card-->
+                <div class="element">
+                    <img src="images/palitobombom.jpg" width="200px" alt="copahelada" class="image-helado">
+                    <div class="element-information">
+                        <div class="title">
+                            Palito Bombon
+                        </div>
+                        <div class="price">
+                            $100.00
+                        </div>
+
+                    </div>
+                    <p>
+                        Americana<br> Frutilla<br> Chocolate
+                    </p><br>
+                    <hr><br>
+                    <button data-order="palitobombom">Pedir</button>
+                </div>
+
+                <!--otra card-->
+                <div class="element">
+                    <img src="images/cucurucho.jpg" width="200px" alt="cucurucho" class="image-helado">
+                    <div class="element-information">
+                        <div class="title">
+                            Cucurucho 3 Bochas
+                        </div>
+                        <div class="price">
+                            $200.00
+                        </div>
+
+                    </div>
+                    <p>
+                        Sabores a <br> Eleccion
+                    </p><br>
+                    <hr><br>
+                    <button data-order="cucurucho">Pedir</button>
+                </div>
+                <!--otra card-->
+                <div class="element">
+                    <img src="images/palitocrema.jpg" width="200px" alt="palitocrema" class="image-helado">
+                    <div class="element-information">
+                        <div class="title">
+                            Palito de Crema
+                        </div>
+                        <div class="price">
+                            $50.00
+                        </div>
+
+                    </div>
+                    <p>
+                        Sabores: Chocolate<br>Americana<br> Frutilla
+                    </p><br>
+                    <hr><br>
+                    <button data-order="palitocrema">Pedir</button>
+                </div>
+                <div class="element">
+                    <img src="images/sandwich.jpg" width="200px" alt="sandwich" class="image-helado">
+                    <div class="element-information">
+                        <div class="title">
+                            Sandwich Helado
+                        </div>
+                        <div class="price">
+                            $70.00
+                        </div>
+
+                    </div>
+                    <p>
+                        Sabores: Frutilla<br> Americana <br>Chocolate
+                    </p> <br>
+                    <hr><br>
+                    <button data-order="sandwich">Pedir</button>
+                </div>
+                <!--otra card-->
+                <div class="element">
+                    <img src="images/palitoagua.jpg" width="200px" alt="copahelada" class="image-helado">
+                    <div class="element-information">
+                        <div class="title">
+                            Palito Agua
+                        </div>
+                        <div class="price">
+                            $25.00
+                        </div>
+
+                    </div>
+                    <p>
+                        Sabores: Frutilla<br> Naranja<br> Manzana
+                    </p><br>
+                    <hr><br>
+                    <button data-order="palitoagua">Pedir</button>
+                </div>
+
+                <!--otra card-->
+
+
+
+
             </section>
 
         </article>
@@ -65,5 +160,6 @@
 
 
 </body>
+<script src="catalogo.js"></script>
 
 </html>
